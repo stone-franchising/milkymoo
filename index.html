@@ -1,0 +1,1243 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parceria Oficial: Stone x Milky Moo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --stone:    #e84070;
+      --stone-dk: #c02050;
+      --brand:    #1a1a1a;
+      --soft:     #fff5f8;
+      --softbdr:  #f0c0cc;
+      --text:     #1a1a1a;
+      --sub:      #4a2530;
+      --muted:    #9a7080;
+      --white:    #ffffff;
+      --font: 'Inter', -apple-system, sans-serif;
+    }
+
+    body {
+      font-family: var(--font);
+      background: #e5e5e5;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    .header {
+      background: var(--white);
+      border-bottom: 3px solid var(--stone);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-logos {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo-stone {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--stone);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .logo-sep {
+      width: 1px;
+      height: 32px;
+      background: #ddd;
+    }
+    .logo-brand-img {
+      height: 44px;
+      width: auto;
+    }
+    .header-center { display: flex; justify-content: center; }
+    .header-right { display: flex; align-items: center; justify-content: flex-end; }
+    .btn-sim-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: transparent;
+      color: var(--stone);
+      font-size: 8.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 6px 13px;
+      border-radius: 20px;
+      border: 1.5px solid var(--stone);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-sim-header:hover { background: var(--soft); }
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: transparent;
+      border: 1.5px solid var(--softbdr);
+      color: var(--stone);
+      font-size: 8.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+    .header-tagline {
+      font-size: 9px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .btn-especialista {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #00a868;
+      color: var(--white);
+      font-size: 8.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 7px 14px;
+      border-radius: 20px;
+      border: none;
+      text-decoration: none;
+      margin-top: 6px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--white);
+      border-bottom: 2px solid var(--softbdr);
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .hero-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 24px;
+    }
+    .hero-logo-brand {
+      height: 160px;
+      width: auto;
+    }
+    .hero-logo-sep {
+      width: 1.5px;
+      height: 70px;
+      background: var(--stone);
+      opacity: 0.5;
+      border-radius: 2px;
+    }
+    .hero-stone-text {
+      font-size: 52px;
+      font-weight: 900;
+      color: var(--stone);
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border: 1.5px solid var(--softbdr);
+      color: var(--stone);
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--brand);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: var(--stone); }
+    .hero-sub {
+      font-size: 13px;
+      color: var(--sub);
+      max-width: 460px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* MAIN */
+    .main {
+      padding: 28px 20px 14px;
+      flex: 1;
+    }
+    .welcome-text {
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: none;
+    }
+    .welcome-text p {
+      font-size: 13px;
+      color: var(--sub);
+      line-height: 1.7;
+    }
+    .welcome-text strong { color: var(--brand); font-weight: 700; }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--stone);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--softbdr);
+    }
+
+    /* PLAN CARDS */
+    .plans-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .plan-card {
+      border: 1.5px solid #dde8e2;
+      border-radius: 10px;
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .plan-card .plan-top-bar {
+      border-radius: 8px 8px 0 0;
+    }
+    .plan-card.featured {
+      border-color: var(--stone);
+      box-shadow: 0 0 0 1px var(--stone);
+    }
+    .plan-card.featured-dark {
+      border-color: #1a1a1a;
+      box-shadow: 0 0 0 1px #1a1a1a;
+    }
+    .plan-card.plan-destaque {
+      box-shadow: 0 0 0 1px #1a1a1a, 0 8px 28px rgba(0,0,0,0.18);
+      position: relative;
+    }
+    .plan-badge-top {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #00a868;
+      color: #fff;
+      font-size: 8px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .plan-top-bar {
+      height: 4px;
+      background: #dde8e2;
+    }
+    .plan-card.featured .plan-top-bar { background: var(--stone); }
+    .plan-card.featured-dark .plan-top-bar { background: #1a1a1a; }
+    .plan-body {
+      padding: 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .plan-name {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .plan-desc {
+      font-size: 8px;
+      color: var(--muted);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .plan-rates-row {
+      display: flex;
+      flex-direction: row;
+      gap: 6px;
+      margin-bottom: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+    .plan-rate-num {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--stone);
+      line-height: 1;
+    }
+    .plan-rate-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
+    }
+    .plan-rate-unit {
+      font-size: 9px;
+      color: var(--sub);
+      font-weight: 500;
+    }
+    .plan-rate-info {
+      font-size: 7.5px;
+      color: var(--muted);
+    }
+
+    /* TAX TABLE */
+    .plan-tax-block {
+      background: var(--soft);
+      border-radius: 7px;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+    }
+    .plan-tax-header {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 4px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid var(--softbdr);
+    }
+    .plan-tax-header span {
+      font-size: 6.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+    }
+    .plan-tax-header .th-vals {
+      display: flex;
+      gap: 10px;
+    }
+    .plan-tax-header .th-vals span { min-width: 32px; text-align: center; }
+    .plan-tax-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 0;
+      border-bottom: 1px solid #ddeee6;
+      font-size: 8px;
+    }
+    .plan-tax-row:last-child { border-bottom: none; }
+    .plan-tax-label { color: var(--sub); font-weight: 500; }
+    .plan-tax-vals { display: flex; gap: 10px; }
+    .plan-tax-val { text-align: center; min-width: 32px; }
+    .plan-tax-val .tv-num {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--stone);
+    }
+    .plan-tax-val .tv-lbl {
+      font-size: 6.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      display: block;
+    }
+
+    /* PIX */
+    .plan-pix {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white);
+      border: 1px solid var(--softbdr);
+      border-radius: 6px;
+      padding: 5px 8px;
+      margin-bottom: 10px;
+    }
+    .plan-pix-label {
+      font-size: 8px;
+      font-weight: 700;
+      color: var(--sub);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .plan-pix-val {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--stone);
+    }
+
+    /* EQUIPAMENTOS */
+    .plan-equip {
+      margin-top: 4px;
+    }
+    .plan-equip-row {
+      text-align: center;
+      padding: 6px 0;
+      border-bottom: 1px dashed #eef3f0;
+    }
+    .plan-equip-row:last-child { border-bottom: none; }
+    .plan-equip-val {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .plan-equip-label {
+      display: block;
+      font-size: 8px;
+      color: var(--stone);
+      text-transform: none;
+      letter-spacing: 0.3px;
+    }
+
+    /* CHECKLIST */
+    .plan-checks {
+      list-style: none;
+      margin-top: 16px;
+      margin-bottom: 10px;
+      min-height: 72px;
+    }
+    .plan-checks li {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      font-size: 8.5px;
+      color: var(--sub);
+      padding: 3px 0;
+      border-bottom: 1px dashed #eef3f0;
+    }
+    .plan-checks li:last-child { border-bottom: none; }
+    .check-icon {
+      flex-shrink: 0;
+      width: 13px;
+      height: 13px;
+      background: var(--soft);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* BENEFITS */
+    .benefits-strip {
+      background: #ffffff;
+      border-top: none;
+      border-bottom: 1px solid var(--softbdr);
+      padding: 20px 20px;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 12px;
+      background: var(--soft);
+      border: 1px solid var(--softbdr);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .benefit-icon {
+      width: 30px;
+      height: 30px;
+      background: var(--stone);
+      border-radius: 7px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .benefit-body {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .benefit-title {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+    }
+    .benefit-desc {
+      font-size: 8.5px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* CTA FOOTER */
+    .cta-footer {
+      background: var(--stone);
+      padding: 24px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .cta-left { flex: 1; }
+    .cta-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .cta-sub {
+      font-size: 10px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.5;
+    }
+    .cta-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #00a868;
+      color: var(--white);
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 10px 16px;
+      border-radius: 20px;
+      border: none;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.5);
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 10px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    /* MODAL */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      width: 440px;
+      max-width: 95vw;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--soft);
+      border: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 14px;
+      color: var(--sub);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal h2 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--brand);
+      margin-bottom: 4px;
+    }
+    .modal-sub {
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .form-group { margin-bottom: 12px; }
+    .form-group label {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--sub);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1.5px solid #dde8e2;
+      border-radius: 8px;
+      font-size: 13px;
+      font-family: var(--font);
+      color: var(--text);
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus { border-color: var(--stone); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .form-radio-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .form-radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--sub);
+      text-transform: none;
+      letter-spacing: 0;
+      cursor: pointer;
+    }
+    .btn-submit {
+      width: 100%;
+      background: var(--stone);
+      color: var(--white);
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: var(--font);
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .btn-submit:hover { background: var(--stone-dk); }
+
+    /* TABLET */
+    @media (max-width: 900px) {
+      .page { width: 100%; max-width: 100%; margin: 0; }
+      .hero { padding: 24px 20px; }
+      .hero-logo-brand { height: 110px; }
+      .hero-logos img[alt="Stone"] { height: 110px !important; }
+      .plans-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+      .main { padding: 20px 16px 12px; }
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      body { background: white; }
+      .page { width: 100%; margin: 0; }
+      .header { padding: 8px 12px; flex-wrap: nowrap; gap: 8px; align-items: center; }
+      .header-logos { flex: 1; min-width: 0; }
+      .header-badge { display: none; }
+      .header-right { flex-shrink: 0; }
+      .btn-especialista { width: auto; margin-top: 0; font-size: 7.5px; padding: 6px 12px; }
+      .hero { padding: 20px 14px; }
+      .hero-logos { gap: 14px; margin-bottom: 14px; }
+      .hero-logo-brand { height: 80px; }
+      .hero-logos img[alt="Stone"] { height: 80px !important; }
+      .hero-logo-sep { height: 50px; }
+      .main { padding: 16px 14px 10px; }
+      .welcome-text { margin-bottom: 16px; }
+      .welcome-text p { font-size: 12px; }
+      .plans-row { grid-template-columns: 1fr; gap: 12px; }
+      .benefits-strip { padding: 16px 14px; }
+      .benefits-grid { grid-template-columns: 1fr; gap: 10px; }
+      .cta-footer { flex-direction: column; text-align: center; padding: 20px 14px 90px; gap: 14px; }
+      .cta-title { font-size: 16px; }
+      .cta-actions { flex-direction: column; width: 100%; }
+      .btn-whatsapp, .btn-secondary { width: 100%; justify-content: center; }
+    }
+
+    /* BOTÃO FLUTUANTE MOBILE */
+    .sticky-cta {
+      display: none;
+    }
+    @media (max-width: 600px) {
+      .sticky-cta {
+        display: flex;
+        position: fixed;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        background: #00a868;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        padding: 13px 28px;
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 18px rgba(0,168,104,0.45);
+        white-space: nowrap;
+        animation: pulse-btn 2.5s infinite;
+      }
+    }
+
+    /* ANIMAÇÃO DE PULSO */
+    @keyframes pulse-btn {
+      0%, 100% { box-shadow: 0 4px 18px rgba(0,168,104,0.45); }
+      50% { box-shadow: 0 4px 28px rgba(0,168,104,0.75); }
+    }
+    .btn-whatsapp:hover, .btn-especialista:hover {
+      transform: scale(1.04);
+      transition: transform 0.15s ease;
+    }
+    .btn-whatsapp { transition: transform 0.15s ease; }
+    .btn-especialista { transition: transform 0.15s ease; }
+
+    /* IMPRESSÃO — tudo em uma página A4 */
+    @media print {
+      @page { size: A4 portrait; margin: 0; }
+      *, *::before, *::after {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      html, body { background: white !important; margin: 0; padding: 0; }
+
+      /* Página ocupa exatamente o A4 e distribui seções pelo flex */
+      .page {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .modal-overlay { display: none !important; }
+      .sticky-cta { display: none !important; }
+
+      /* header */
+      .header { padding: 10px 20px; }
+      .btn-especialista { display: none; }
+
+      /* hero */
+      .hero { padding: 20px 20px 14px; }
+      .hero-logos { gap: 22px; margin-bottom: 14px; }
+      .hero-logo-brand { height: 120px; }
+      .hero-logos img[alt="Stone"] { height: 120px !important; }
+      .hero-logo-sep { height: 70px; }
+
+      /* main */
+      .main { padding: 12px 18px 10px; flex: 1; display: flex; flex-direction: column; }
+      .welcome-text { margin-bottom: 14px; }
+      .welcome-text p { font-size: 10.5px; line-height: 1.5; }
+      .section-label { font-size: 8.5px; margin-bottom: 8px; }
+
+      /* plans */
+      .plans-row { gap: 10px; margin-bottom: 0; flex: 1; align-items: stretch; }
+      .plan-card { height: 100%; }
+      .plan-body { padding: 12px; display: flex; flex-direction: column; }
+      .plan-name { font-size: 11px; }
+      .plan-desc { font-size: 7.5px; margin-bottom: 8px; }
+      .plan-rates-row { margin-bottom: 6px; }
+      .plan-rate-num { font-size: 22px; }
+      .plan-checks { margin-top: 8px; margin-bottom: 8px; min-height: auto; }
+      .plan-checks li { font-size: 7.5px; padding: 3px 0; }
+      .plan-tax-block { padding: 6px 8px; margin-bottom: 6px; }
+      .plan-pix { padding: 4px 8px; margin-bottom: 5px; }
+      .plan-pix-label { font-size: 7px; }
+      .plan-pix-val { font-size: 9px; }
+      .plan-equip-row { padding: 5px 0; }
+      .plan-equip-val { font-size: 12px; }
+      .plan-equip-label { font-size: 7px; }
+
+      /* benefits */
+      .benefits-strip { padding: 12px 18px; }
+      .benefits-grid { gap: 11px; padding: 12px; margin-top: 8px; }
+      .benefit-item { gap: 8px; }
+      .benefit-icon { width: 26px; height: 26px; }
+      .benefit-title { font-size: 8.5px; }
+      .benefit-desc { font-size: 7.5px; }
+
+      /* cta */
+      .cta-footer { padding: 14px 20px; }
+      .cta-title { font-size: 14px; margin-bottom: 4px; }
+      .cta-sub { font-size: 8.5px; }
+      .btn-whatsapp { padding: 9px 14px; font-size: 8.5px; }
+      .btn-secondary { padding: 9px 14px; font-size: 8.5px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-logos">
+      <button class="btn-sim-header" onclick="document.getElementById('modal-sim').classList.add('active')">Simulador de Taxas</button>
+    </div>
+    <div class="header-right">
+      <button class="btn-especialista" onclick="document.getElementById('modal').classList.add('active')">Quero ser Stone</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-logos">
+      <img src="milkymoo.jpg" alt="Milky Moo" class="hero-logo-brand">
+      <div class="hero-logo-sep"></div>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKkAAACUCAMAAADf7/luAAAAY1BMVEX///8AqGgApWH3+/kAo10ApmQAoVkurHDR6dz7/f2n174jqm2JyKZyv5Wn1bsAn1Tp9e8AnE5lvJDb7uS43cjv9/NYuIhFs37I5dau2cGUy6p+xqE8sHjA4c9TtYJjuYmZ0bSdEWpxAAAFwUlEQVR4nO2Z25asKAyGSwQ8leX5UOXx/Z9yVIKCYJd79qzVc5Hvrq0APxBCQj8eCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIKYuILgt3V8J9+Yyt/W8RU3ISv889tCvuJyZ4Wi0v+O/6XSqnjFjRf1dVcWlfwISsnTrVYCvcE77iMWNUsD195nkLZz7TEWjd2QXti4admNEXOa7p1WdhONYm4yThlzCKE86T+tppR5zUrfKg1eTbI0WH8knE/v1NJp+3QSSthqQhOaDxatwTteflq7WcblU3gxnYPQ26wljDqjqtRhG8kRrD56A0L7tyGic3QbVhvT8SdCtW5q/0edbszVLrc2vaZUwKVSvzcaMJ7rOoqeOmebRNcRfMxuktdPSmN+7tPh8w9Kh4gYDZZj1xRKn6kpdNERKf7zqLrE0k1mbM7BGxoQni0kfPFWJ2mvlfrRvhKbUxxSlRMxUZsN8w5HDJ7ShC0uSncbMlwJTXthw+r1WFR+WPeENqmuVPHTAuyXAbxxrMcmkiOSadcxwzdGFptx7KUOmu/jznKBlmMfhvMyKuhgxVkiUIqt5Meqp++xCzSl0XH2gxhEEO/jr1Zu+9x1zLKHBkZ1ntuwadiDw3Apo8igzTgEMKpDzrPR+Wwjs1FbZ9hHGU/zIl1Zu/S53OvjBBWMwCrDog5gxPcjVDTChDzhQ81A1tFN64lviT2uuh3VlkP/EZTGh3vBaSLaxAMPliMWf+awT0oOVkRiMjDBEhZ9UiOoL2xId6GUmCNfK/XF3rNRn7cPy8E2QxeWuFFlxLD/rTLq4QwC8ZWN1gtAHkFu82NT6RNEnDPWjinfU+GDXIuNbaKscyFmRmq9F3Bezx7/33BC+KeoznMxlFbCvVh/7iVVNw5EUS3euJly6sAiOUsSn4k9phaeA1J5082ltrSGUghRluRKnHY2rV5RimZanH8EYkVEU4hiZH5pvIUSenFRxUeQXm7hfpwPFzSUtsy+FotbiBCyXVTh1oxFmlUAKp5rBIEjt9z0OtLGrvTRq5cjYzxriuBCaSn6ykyXHxR135U2tvt4h3YXOVVany5+Qj/uhVLxITOLVfA8555S75ya6ONfKX24n4zoTWn3L5Vuvvm3Sml3XbZXz4ZRVW1W/qjUnLP4hXl/tvuelaY1ule1lnMcJVz6D+tdm9IBTpQZfMVpZv0fnaho8G3YCggNNy3KXGrdttFQCncRD43GEKXq6pZSkWw4yVdNP1DBrUdmm9LLyF+JxRaR/7tSSGHs2cZdAnHbbBHavE3lrXn2pBfcsuE9pYXIxll0Hv1ryacCyZVd6UDOXzZkes3Se0pd2LmzG1XTVdD/Qel8KGVKLgrxhWs9VjncjiIj+6708YaZ6clINXKeXy/r+aiJDJ5tWYJMm+f91xIiPP8cPaayZoSE7IZSFzaBNIpRkS8NqVlsSyYvVpMeyBy9bdC9VMuXeBKun9xRViejbPXeSw9Y6BtK9xmTaJZX91Nk6SS6eEtZXIwkSf7y/WLh7UHKI7L3bq8fOefZluIU8n5hCYnn15xzWbWTMb2v9EiMOK+XlKrrM1kl8otFHcQoPKGR51AYVVr7akkOReFwZAlkKX/3XOMoKm8prca9JaFcuSD5VcX/Op4QjrpcPuy4tfLAILsoE9utTY6q4ZbSR+rZEioGjyImwdN8QSFH8VEo7yX7ZFvLAwkdjz27p/QRjNSYMnGu31AGL9HnxhI1Q/C9/fHo2Ja0O7Wh9KMcg5tKH+5M9CkzXv+UnFRtzDhhAOGe/nyYfghfH/spzY4yL/Dr1bWgCeWdlrKEGV9hulKyfUyeakZXxZTKkRnlke3lUicd5jiepinuQkuNWpThPL9bPXhUYTyNfd+MU1ee00n7/4bE19PHoJTdxOH9fMXo5pt9usS19K//WRVs3fzh2AiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiC/C7/ADxAT+uFENn5AAAAAElFTkSuQmCC" alt="Stone" style="height:110px;width:auto;height:160px;mix-blend-mode:multiply;">
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <div class="welcome-text">
+      <p>Como <strong>franqueado Milky Moo</strong>, você acaba de destravar uma condição comercial única! Unimos a tecnologia de ponta da Stone a <strong>taxas extremamente agressivas</strong> para garantir que a sua margem de lucro cresça a cada milkshake vendido.<br><br>Confira abaixo e escolha o plano perfeito para acelerar os resultados da sua loja:</p>
+    </div>
+
+    <div class="section-label">Planos disponíveis</div>
+
+    <div class="plans-row">
+
+      <!-- PLANO ÚNICO -->
+      <div class="plan-card featured">
+        <div class="plan-top-bar"></div>
+        <div class="plan-body">
+          <div class="plan-name">QUERIDINHOS</div>
+          <div class="plan-desc">Modelo Padrão — equilíbrio entre taxa e prazo</div>
+          <div class="plan-rates-row">
+            <div class="plan-rate-main">
+              <div class="plan-rate-num">0,67%</div>
+              <div class="plan-rate-info">D+1</div>
+            </div>
+            <div class="plan-rate-unit">débito</div>
+          </div>
+          <div class="plan-rates-row">
+            <div class="plan-rate-main">
+              <div class="plan-rate-num">1,65%</div>
+              <div class="plan-rate-info">D+30</div>
+            </div>
+            <div class="plan-rate-unit">crédito</div>
+          </div>
+          <ul class="plan-checks">
+            <li><span class="check-icon"><svg width="8" height="8" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#e84070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Débito em D+1 · Crédito em D+30</li>
+            <li><span class="check-icon"><svg width="8" height="8" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#e84070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Melhor custo-benefício</li>
+          </ul>
+          <div class="plan-tax-block">
+            <div class="plan-tax-header">
+              <span>Bandeira</span>
+              <div class="th-vals">
+                <span>Débito</span>
+                <span>Crédito</span>
+              </div>
+            </div>
+            <div class="plan-tax-row">
+              <span class="plan-tax-label">Master / Visa</span>
+              <div class="plan-tax-vals">
+                <div class="plan-tax-val"><span class="tv-num">0,67%</span><span class="tv-lbl">D+1</span></div>
+                <div class="plan-tax-val"><span class="tv-num">1,65%</span><span class="tv-lbl">D+30</span></div>
+              </div>
+            </div>
+            <div class="plan-tax-row">
+              <span class="plan-tax-label">Elo</span>
+              <div class="plan-tax-vals">
+                <div class="plan-tax-val"><span class="tv-num">1,19%</span><span class="tv-lbl">D+1</span></div>
+                <div class="plan-tax-val"><span class="tv-num">2,09%</span><span class="tv-lbl">D+30</span></div>
+              </div>
+            </div>
+            <div class="plan-tax-row">
+              <span class="plan-tax-label">Amex</span>
+              <div class="plan-tax-vals">
+                <div class="plan-tax-val"><span class="tv-num">—</span><span class="tv-lbl"></span></div>
+                <div class="plan-tax-val"><span class="tv-num">2,09%</span><span class="tv-lbl">D+30</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="plan-pix">
+            <span class="plan-pix-label">PIX (D+0)</span>
+            <span class="plan-pix-val">0,39%</span>
+          </div>
+          <div class="plan-pix">
+            <span class="plan-pix-label">Antecipação Pontual</span>
+            <span class="plan-pix-val">1,75% a.m</span>
+          </div>
+          <div class="plan-pix">
+            <span class="plan-pix-label">Conta PJ Stone</span>
+            <span class="plan-pix-val">Grátis</span>
+          </div>
+          <div class="plan-pix">
+            <span class="plan-pix-label">Domicílio de recebimento das vendas</span>
+            <span class="plan-pix-val">Stone</span>
+          </div>
+          <div class="plan-equip">
+            <div class="plan-equip-row">
+              <span class="plan-equip-val">R$ 39,00 / mês</span>
+              <span class="plan-equip-label">por POS</span>
+            </div>
+            <div class="plan-equip-row">
+              <span class="plan-equip-val">R$ 35,00 / mês</span>
+              <span class="plan-equip-label">por Pinpad (TEF)</span>
+            </div>
+          </div>
+          <p style="font-size:7px;color:var(--muted);line-height:1.5;margin-top:8px;padding-top:8px;border-top:1px dashed #eef3f0;">
+            Acréscimo de 0,05% em todas as linhas de MDR em caso de utilização de outro domicílio de recebimento das vendas.<br>
+            Exemplo: Débito Visa: 0,67% para 0,72%. Crédito Master: 1,65% para 1,70%.
+          </p>
+        </div>
+      </div>
+
+      <!-- PLANO 2: CONDIÇÃO ANTECIPADA -->
+      <div class="plan-card featured-dark plan-destaque">
+        <div class="plan-badge-top">Mais Escolhido</div>
+        <div class="plan-top-bar"></div>
+        <div class="plan-body">
+          <div class="plan-name">FRUTUDOS</div>
+          <div class="plan-desc">Receba tudo no próximo dia útil</div>
+          <div class="plan-rates-row">
+            <div class="plan-rate-main">
+              <div class="plan-rate-num">0,67%</div>
+              <div class="plan-rate-info">D+1</div>
+            </div>
+            <div class="plan-rate-unit">débito</div>
+          </div>
+          <div class="plan-rates-row">
+            <div class="plan-rate-main">
+              <div class="plan-rate-num">3,12%</div>
+              <div class="plan-rate-info">D+1</div>
+            </div>
+            <div class="plan-rate-unit">crédito</div>
+          </div>
+          <ul class="plan-checks">
+            <li><span class="check-icon"><svg width="8" height="8" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#e84070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Débito em D+1 · Crédito em D+1</li>
+            <li><span class="check-icon"><svg width="8" height="8" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 3" stroke="#e84070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>3,12% é o custo efetivo total para receber com 1 dia útil</li>
+          </ul>
+          <div class="plan-tax-block">
+            <div class="plan-tax-header">
+              <span>Bandeira</span>
+              <div class="th-vals">
+                <span>Débito</span>
+                <span>Crédito</span>
+              </div>
+            </div>
+            <div class="plan-tax-row">
+              <span class="plan-tax-label">Master / Visa</span>
+              <div class="plan-tax-vals">
+                <div class="plan-tax-val"><span class="tv-num">0,67%</span><span class="tv-lbl">D+1</span></div>
+                <div class="plan-tax-val"><span class="tv-num">3,12%</span><span class="tv-lbl">D+1</span></div>
+              </div>
+            </div>
+            <div class="plan-tax-row">
+              <span class="plan-tax-label">Elo</span>
+              <div class="plan-tax-vals">
+                <div class="plan-tax-val"><span class="tv-num">1,19%</span><span class="tv-lbl">D+1</span></div>
+                <div class="plan-tax-val"><span class="tv-num">3,55%</span><span class="tv-lbl">D+1</span></div>
+              </div>
+            </div>
+            <div class="plan-tax-row">
+              <span class="plan-tax-label">Amex</span>
+              <div class="plan-tax-vals">
+                <div class="plan-tax-val"><span class="tv-num">—</span><span class="tv-lbl"></span></div>
+                <div class="plan-tax-val"><span class="tv-num">3,55%</span><span class="tv-lbl">D+1</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="plan-pix">
+            <span class="plan-pix-label">PIX (D+0)</span>
+            <span class="plan-pix-val">0,39%</span>
+          </div>
+          <div class="plan-pix">
+            <span class="plan-pix-label">Antecipação Pontual</span>
+            <span class="plan-pix-val">—</span>
+          </div>
+          <div class="plan-pix">
+            <span class="plan-pix-label">Conta PJ Stone</span>
+            <span class="plan-pix-val">Grátis</span>
+          </div>
+          <div class="plan-pix">
+            <span class="plan-pix-label">Domicílio de recebimento das vendas</span>
+            <span class="plan-pix-val">Stone</span>
+          </div>
+          <div class="plan-equip">
+            <div class="plan-equip-row">
+              <span class="plan-equip-val">R$ 39,00 / mês</span>
+              <span class="plan-equip-label">por POS</span>
+            </div>
+            <div class="plan-equip-row">
+              <span class="plan-equip-val">R$ 35,00 / mês</span>
+              <span class="plan-equip-label">por Pinpad (TEF)</span>
+            </div>
+          </div>
+          <p style="font-size:7px;color:var(--muted);line-height:1.5;margin-top:8px;padding-top:8px;border-top:1px dashed #eef3f0;">
+            Acréscimo de 0,05% em todas as linhas de MDR em caso de utilização de outro domicílio de recebimento das vendas.<br>
+            Exemplo: Débito Visa: 0,67% para 0,72%. Crédito Master: 3,12% para 3,17%.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /plans-row -->
+
+  </main>
+
+  <!-- BENEFITS -->
+  <section class="benefits-strip">
+    <div class="section-label">Benefícios exclusivos da parceria</div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 7v6c0 3.3 3 6.3 7 7 4-0.7 7-3.7 7-7V7L10 2z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="benefit-body">
+          <span class="benefit-title">Raio-x</span>
+          <span class="benefit-desc">Fim das cobranças indevidas. Auditamos 100% das suas taxas e mensalidades para garantir que você não pague um centavo a mais.</span>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="white" stroke-width="1.5"/><path d="M10 6v4l3 3" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="benefit-body">
+          <span class="benefit-title">Raio-x Delivery</span>
+          <span class="benefit-desc">Controle total do Delivery. Saiba exatamente quanto você lucra em cada pedido do iFood e 99Food, sem planilhas confusas.</span>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M4 4h5v5H4zM11 4h5v5h-5zM4 11h5v5H4zM11 11h5v5h-5z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="benefit-body">
+          <span class="benefit-title">Suporte em 5 Segundos</span>
+          <span class="benefit-desc">Atendimento de verdade, em 5 segundos. Deu problema na fila? Você fala com um humano em segundos, 24h por dia, 7 dias por semana.</span>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><rect x="3" y="5" width="14" height="10" rx="1.5" stroke="white" stroke-width="1.5"/><path d="M3 9h14" stroke="white" stroke-width="1.5"/></svg>
+        </div>
+        <div class="benefit-body">
+          <span class="benefit-title">Gestão Completa do Negócio</span>
+          <span class="benefit-desc">Conheça seu cliente. Descubra os horários de pico e a frequência dos seus clientes para criar promoções mais assertivas.</span>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="white" stroke-width="1.5"/><path d="M10 6v4l3 3" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="benefit-body">
+          <span class="benefit-title">Maquininha em até 1 dia</span>
+          <span class="benefit-desc">Instalação e treinamento gratuitos por especialista Stone.</span>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">
+          <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="white" stroke-width="1.5"/><path d="M10 6v1m0 6v1M7.5 10c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="benefit-body">
+          <span class="benefit-title">Crédito pra Crescer</span>
+          <span class="benefit-desc">Cresça sua franquia. Pague no ritmo das suas vendas.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FOOTER -->
+  <footer class="cta-footer" id="cta-footer">
+    <div class="cta-left">
+      <div class="cta-title">Quer ver a diferença no seu bolso?</div>
+      <div class="cta-sub">Fale com um especialista e faça uma auditoria gratuita das suas taxas atuais. É rápido, sem compromisso e pelo WhatsApp.</div>
+    </div>
+    <div class="cta-actions">
+      <button class="btn-whatsapp" onclick="document.getElementById('modal').classList.add('active')">
+        Quero ser Stone
+      </button>
+      <button class="btn-secondary" onclick="document.getElementById('modal-sim').classList.add('active')">
+        Simulador de Taxas
+      </button>
+    </div>
+  </footer>
+
+</div><!-- /page -->
+
+<!-- MODAL SIMULADOR -->
+<div class="modal-overlay" id="modal-sim" style="z-index:200;">
+  <div class="modal" style="width:600px; max-width:96vw; max-height:92vh; overflow-y:auto; padding:0; border-radius:16px; position:relative;">
+    <button style="position:absolute;top:12px;right:12px;z-index:10;background:#fff5f8;border:none;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:14px;color:#4a2530;display:flex;align-items:center;justify-content:center;" onclick="document.getElementById('modal-sim').classList.remove('active')">&#x2715;</button>
+    <iframe src="simulador-taxas/index.html" style="width:100%;height:80vh;border:none;border-radius:16px;" title="Simulador de Taxas"></iframe>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('modal').classList.remove('active')">&#x2715;</button>
+    <h2>Quero aderir</h2>
+    <div class="modal-sub">Falta pouco! Preencha os dados abaixo para que nosso time entre em contato com a melhor solução para a sua unidade.</div>
+    <form id="form-contato" onsubmit="enviarFormulario(event)">
+      <div class="form-group">
+        <label>Nome</label>
+        <input type="text" id="f-nome" placeholder="Seu nome completo" required>
+      </div>
+      <div class="form-group">
+        <label>Quantidade de lojas Milky Moo</label>
+        <select id="f-operacoes" required>
+          <option value="">Selecione...</option>
+          <option value="1 loja">1 loja</option>
+          <option value="2 a 5 lojas">2 a 5 lojas</option>
+          <option value="Mais de 5 lojas">Mais de 5 lojas</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Oferta de interesse</label>
+        <select id="f-oferta" required>
+          <option value="">Selecione...</option>
+          <option value="QUERIDINHOS">QUERIDINHOS</option>
+          <option value="FRUTUDOS">FRUTUDOS</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Telefone</label>
+        <input type="tel" id="f-telefone" placeholder="(11) 99999-9999" oninput="formatarTelefone(this)" required>
+      </div>
+      <button type="submit" class="btn-submit" id="btn-enviar">Enviar</button>
+    </form>
+  </div>
+</div>
+
+<button class="sticky-cta" onclick="document.getElementById('modal').classList.add('active')">Garantir Minhas Taxas</button>
+
+<script>
+  function formatarTelefone(input) {
+    let v = input.value.replace(/\D/g, '');
+    if (v.length > 11) v = v.slice(0, 11);
+    if (v.length > 10) {
+      v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+    } else if (v.length > 6) {
+      v = v.replace(/^(\d{2})(\d{4,5})(\d{0,4})/, '($1) $2-$3');
+    } else if (v.length > 2) {
+      v = v.replace(/^(\d{2})(\d+)/, '($1) $2');
+    } else if (v.length > 0) {
+      v = '(' + v;
+    }
+    input.value = v;
+  }
+
+  const AIRTABLE_TOKEN = 'pat2HTQCkhFGsy4Is.3a8dbe81a41de94b676518098e7ccb355b70ff52f81517b4676b19c68fe474dd';
+  const AIRTABLE_BASE  = 'app6eoL0G1AOIzPoz';
+  const AIRTABLE_TABLE = 'tblCCVpPqgyAjYyp9';
+
+  function enviarFormulario(e) {
+    e.preventDefault();
+    const nome     = document.getElementById('f-nome').value;
+    const lojas    = document.getElementById('f-operacoes').value;
+    const oferta   = document.getElementById('f-oferta').value;
+    const telefone = document.getElementById('f-telefone').value;
+    const btn      = document.getElementById('btn-enviar');
+
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+
+    fetch('https://api.airtable.com/v0/' + AIRTABLE_BASE + '/' + AIRTABLE_TABLE, {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + AIRTABLE_TOKEN,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        fields: {
+          Marca: 'MILKY MOO',
+          Nome: nome,
+          Lojas: lojas,
+          Oferta: oferta,
+          Telefone: telefone
+        }
+      })
+    })
+    .then(function(res) {
+      return res.json().then(function(data) {
+        if (!res.ok) throw new Error(JSON.stringify(data));
+        return data;
+      });
+    })
+    .then(function() {
+      btn.textContent = 'Enviado com sucesso!';
+      setTimeout(function() {
+        document.getElementById('modal').classList.remove('active');
+        e.target.reset();
+        btn.textContent = 'Enviar';
+        btn.disabled = false;
+      }, 2000);
+    })
+    .catch(function(err) {
+      btn.textContent = 'Erro. Tente novamente.';
+      btn.disabled = false;
+      alert('Erro ao enviar: ' + err.message);
+    });
+  }
+
+  document.getElementById('modal').addEventListener('click', function(e) {
+    if (e.target === this) this.classList.remove('active');
+  });
+
+  document.getElementById('modal-sim').addEventListener('click', function(e) {
+    if (e.target === this) this.classList.remove('active');
+  });
+
+  const stickyCta = document.querySelector('.sticky-cta');
+  const ctaFooter = document.getElementById('cta-footer');
+  if (stickyCta && ctaFooter) {
+    new IntersectionObserver(function(entries) {
+      stickyCta.style.opacity = entries[0].isIntersecting ? '0' : '';
+      stickyCta.style.pointerEvents = entries[0].isIntersecting ? 'none' : '';
+    }, { threshold: 0.1 }).observe(ctaFooter);
+  }
+</script>
+
+
+</body>
+</html>
+
